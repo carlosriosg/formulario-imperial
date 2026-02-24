@@ -24,11 +24,8 @@
             text-align: center;
             padding: 15px 20px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-            
-            /* Esto es vital: Asegura que la barra azul esté por encima de todo */
             position: relative; 
             z-index: 10; 
-            
             display: flex;
             justify-content: center;
             align-items: center;
@@ -47,21 +44,19 @@
             flex: 1; 
             width: 100%;
             background-color: #121212;
-            
-            /* Esto corta cualquier cosa que se salga del contenedor */
-            overflow: hidden; 
+            overflow: hidden; /* Esto recorta todo lo que sobra por arriba y por abajo */
         }
 
-        /* EL TRUCO PARA ESCONDER LA 'N' */
+        /* EL TRUCO PARA ESCONDER LA 'N' ARRIBA Y EL LOGO ABAJO */
         iframe {
             width: 100%;
             border: none;
             
-            /* 1. Empujamos el iframe 160 píxeles hacia arriba (detrás de la barra azul) */
+            /* 1. Empujamos el iframe 160 píxeles hacia arriba */
             margin-top: -160px; 
             
-            /* 2. Le sumamos esos 160 píxeles a la altura para no perder el botón de "Enviar" abajo */
-            height: calc(100% + 160px); 
+            /* 2. Compensamos los 160px de arriba + le sumamos 80px extra para empujar el pie de página hacia abajo y ocultarlo */
+            height: calc(100% + 240px); 
         }
     </style>
 </head>
