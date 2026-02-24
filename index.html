@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soporte - Ferretería Imperial</title>
+    <style>
+        /* Reseteamos los márgenes para que ocupe toda la pantalla */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #121212; /* Color oscuro que combina con NocoDB */
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden; /* Evita doble barra de scroll */
+        }
+
+        /* Diseño de la barra superior donde irá el logo */
+        .header {
+            background-color: #000000;
+            text-align: center;
+            padding: 15px 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            z-index: 10;
+        }
+
+        /* Tamaño máximo del logo para que no se deforme en celulares */
+        .header img {
+            max-height: 50px;
+            width: auto;
+        }
+
+        /* Contenedor del formulario que ocupará el resto de la pantalla */
+        .iframe-container {
+            flex: 1; 
+            width: 100%;
+            background-color: #121212;
+        }
+
+        /* El formulario en sí */
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <img src="https://www.imperial.cl/arquivos/logo-imperial-blanco.png" alt="Ferretería Imperial">
+    </div>
+
+    <div class="iframe-container">
+        <iframe src="https://TU_ENLACE_DE_NOCODB_AQUI" allow="camera"></iframe>
+    </div>
+
+</body>
+</html>
