@@ -11,29 +11,35 @@
             padding: 0;
             height: 100%;
             width: 100%;
-            background-color: #121212; /* Color oscuro que combina con NocoDB */
+            background-color: #121212; /* Color oscuro de fondo */
             font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
             overflow: hidden; /* Evita doble barra de scroll */
         }
 
-        /* Diseño de la barra superior con el color corporativo que elegiste */
+        /* Diseño de la barra superior azul */
         .header {
-            background-color: #163b66;
+            background-color: #163b66; /* Tu color azul corporativo */
             text-align: center;
-            padding: 15px 10px;
+            padding: 15px 20px; /* Aumenté el padding lateral para dar margen */
             box-shadow: 0 4px 10px rgba(0,0,0,0.5);
             z-index: 10;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        /* Tamaño máximo del logo para que no se deforme en celulares */
+        /* NUEVO DISEÑO DEL LOGO: Control de ancho y márgenes */
         .header img {
-            max-height: 50px;
-            width: auto;
+            max-height: 50px; /* Altura máxima */
+            width: auto; /* El ancho se ajusta solo */
+            max-width: 80%; /* ¡IMPORTANTE! El logo nunca ocupará más del 80% del ancho de la pantalla */
+            height: auto;
+            display: block;
         }
 
-        /* Contenedor del formulario que ocupará el resto de la pantalla */
+        /* Contenedor del formulario */
         .iframe-container {
             flex: 1; 
             width: 100%;
@@ -55,7 +61,7 @@
     </div>
 
     <div class="iframe-container">
-        <iframe src="https://gestion.imperial.koredesk.com/dashboard/#/base/204d13be-d971-4654-a086-623fd095f98f" allow="camera"></iframe>
+        <iframe src="https://gestion.imperial.koredesk.com/dashboard/#/nc/form/e2c739f8-6999-4a77-b719-2788a7066726" allow="camera"></iframe>
     </div>
 
 </body>
